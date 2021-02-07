@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
                   message: "Your password is \(password) 😉")
     }
     
-    @IBAction func unwindSegue() {
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         userNameTextField.text = nil
         passwordTextField.text = nil
     }

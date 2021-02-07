@@ -29,11 +29,17 @@
                                 <rect key="frame" x="40" y="250" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="D8Y-fc-1ed"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OO3-ha-x7i">
                                 <rect key="frame" x="40" y="300" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uyp-WR-8f0"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjt-pM-StG">
                                 <rect key="frame" x="40" y="402" width="118" height="28"/>
@@ -71,8 +77,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passwordTextField" destination="OO3-ha-x7i" id="1eB-nB-4xu"/>
-                        <outlet property="userNameTextField" destination="07N-pU-ZxU" id="NoY-0B-orW"/>
+                        <outlet property="passwordTextField" destination="OO3-ha-x7i" id="m2p-Hj-LKs"/>
+                        <outlet property="userNameTextField" destination="07N-pU-ZxU" id="jWT-CJ-Otk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,6 +111,9 @@
                                 <state key="normal" title="Log out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JKU-R6-2hF" kind="unwind" unwindAction="unwindSegueWithSegue:" id="9BT-L9-Fec"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ons-3Q-TEf"/>
@@ -118,13 +127,14 @@
                             <constraint firstItem="506-Bm-NhV" firstAttribute="centerX" secondItem="2KL-mI-YPq" secondAttribute="centerX" id="yW7-h0-mOh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2Hq-8q-URI"/>
+                    <tabBarItem key="tabBarItem" title="" id="Lyp-zG-A9C"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="welcomeUserLabel" destination="ULZ-DZ-Utp" id="b1b-Wl-3pn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTK-MQ-yXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="JKU-R6-2hF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="875.36231884057975" y="92.934782608695656"/>
         </scene>
